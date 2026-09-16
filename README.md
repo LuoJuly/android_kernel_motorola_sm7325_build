@@ -13,7 +13,7 @@ GitHub Actions for building xpeng LineageOS 23.2 kernel with [ReSukiSU](https://
 
 ## Schedule
 
-Runs every Sunday 00:00 UTC, and can be triggered manually from the Actions tab.
+Runs on the 20th of each month at 00:00 UTC (08:00 Beijing time), and can be triggered manually from the Actions tab.
 
 ## Release assets
 
