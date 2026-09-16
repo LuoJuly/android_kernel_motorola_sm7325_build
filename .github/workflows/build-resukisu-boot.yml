@@ -2,8 +2,8 @@ name: Build ReSukiSU boot.img (xpeng)
 
 "on":
   schedule:
-    # Every Sunday 00:00 UTC (~ weekly)
-    - cron: "0 0 * * 0"
+    # 20th of each month, 00:00 UTC
+    - cron: "0 0 20 * *"
   workflow_dispatch:
     inputs:
       update_resukisu:
