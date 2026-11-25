@@ -88,7 +88,7 @@ update_resukisu() {
 }
 
 # ---------------------------------------------------------------------------
-# 2) Setup AOSP clang (LineageOS 23.2 default: clang-r563880c)
+# 2) Setup AOSP clang (LineageOS 24.0 default: clang-r563880c)
 # ---------------------------------------------------------------------------
 setup_clang() {
   log "Setup ${CLANG_VERSION}"
@@ -187,7 +187,7 @@ if not data:
     raise SystemExit("no builds in LineageOS API response")
 print(data[0]["filename"])
 ' "${meta}")"
-  # lineage-23.2-YYYYMMDD-nightly-xpeng-signed.zip
+  # lineage-24.0-YYYYMMDD-nightly-xpeng-signed.zip
   date="$(echo "${filename}" | sed -nE 's/.*-([0-9]{8})-nightly-.*/\1/p')"
   [[ -n "${date}" ]] || die "Failed to parse LOS date from ${filename}"
   boot_url="https://mirrorbits.lineageos.org/full/${DEVICE}/${date}/boot.img"
@@ -351,7 +351,7 @@ fastboot flash boot boot-*.img
 fastboot reboot
 \`\`\`
 
-> Built automatically from \`lineage-23.2-ReSukiSU\` with the latest ReSukiSU submodule, latest AnyKernel3 upstream, and the newest official LineageOS boot.img for xpeng.
+> Built automatically from \`lineage-24.0-ReSukiSU\` with the latest ReSukiSU submodule, latest AnyKernel3 upstream, and the newest official LineageOS boot.img for xpeng.
 EOF
   gh_env RELEASE_NOTES "${WORK_DIR}/release/RELEASE_NOTES.md"
 }
